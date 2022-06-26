@@ -12,13 +12,13 @@ test('should create a group', async () => {
       id: 'contact1',
       firstName: 'Contact',
       lastName: 'One',
-      phone: '1'
+      phone: '+00 (00) 000000000'
     }),
     new Contact({
       id: 'contact2',
       firstName: 'Contact',
       lastName: 'Two',
-      phone: '2'
+      phone: '+00 (00) 000000001'
     })
   ]
 

@@ -10,7 +10,7 @@ test('should create a contact', async () => {
   const contact = await createContact.execute({
     firstName: 'John',
     lastName: 'Doe',
-    phone: '+00 00 00000-0000'
+    phone: '+00 (00) 000000000'
   })
 
   expect(contact).toHaveProperty('id')
@@ -26,7 +26,7 @@ test('should not create a contact if phone is already used', async () => {
       id: '0',
       firstName: 'John',
       lastName: 'Doe',
-      phone: '+00 00 00000-0000'
+      phone: '+00 (00) 000000000'
     })
   ]
 
@@ -34,7 +34,7 @@ test('should not create a contact if phone is already used', async () => {
     createContact.execute({
       firstName: 'John',
       lastName: 'Doe',
-      phone: '+00 00 00000-0000'
+      phone: '+00 (00) 000000000'
     })
   ).rejects.toThrow('phone is already used')
 })
